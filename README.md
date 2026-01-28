@@ -58,26 +58,4 @@ graph LR
 See `docs/SKILL_FACTORY_CONSTITUTION.md`.
 Flow: Scout -> Create -> Test -> PR.
 
-## License
-
-## Core Skill Pack (For Assembly Members)
-
-地方議員向けの実務スキルセット（v0.1）。
-
-### Purpose
-
-議会の仕事＝**「決める・監視する・説明する」** を支援する。
-
-### Start Here
-
-- `skills/core/00_conductor.md`：迷ったらまずはここから。
-
-### Recommended Chains
-
-- **政策検討**: `00` -> `10` -> `30` -> `11` -> `31` -> `40` -> `41` -> `50` -> `12`
-- **予算審議**: `00` -> `10` -> `21` -> `22` -> `11` -> `50` -> `60` -> `12`
-- **住民の声**: `00` -> `20` -> `40` -> `50` -> `60` -> `12`
-
-### Safety Rule
-
-公開前には必ず **`60 -> 61 (option) -> 12`** を通すこと。
+## LicenseMIT
