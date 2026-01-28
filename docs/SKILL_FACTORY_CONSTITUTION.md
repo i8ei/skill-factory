@@ -34,6 +34,8 @@ Every skill must reside in `skills/<skill_id>/` and contain at least:
 ## 5. Product Separation Rule (Infrastructure vs. Product)
 
 - **Factory Infrastructure**: Skills in `skill factory/skills/` must be restricted to "Meta-Skills" that operate the factory itself (Core, QA, Procurement, Distribution).
-- **Product Skills**: Any domain-specific skill pack (e.g., "Assembly Member Pack", "Coding Pack") **MUST** be exported to its own independent repository.
-  - Do not mix product inventory with factory machinery.
-  - Use `job_pack_composer` to perform the separation.
+- **Product Incubation (Workbench)**: **New Skill Packs must be developed in `workbench/`.**
+  - Do not pollute the main `skills/` directory with work-in-progress.
+  - Use `skill_linter_auditor` to check skills in `workbench/`.
+- **Product Export**: Completed packs **MUST** be exported to an independent repository.
+  - Use `job_pack_composer` to move from `workbench/` to external.
