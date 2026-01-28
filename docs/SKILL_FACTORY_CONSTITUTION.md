@@ -41,3 +41,9 @@ Every skill must reside in `skills/<skill_id>/` and contain at least:
   - Use `skill_linter_auditor` to check skills in `workbench/`.
 - **Product Export**: Completed packs **MUST** be exported to an independent repository.
   - Use `job_pack_composer` to move from `workbench/` to external.
+
+## 6. Product Composition Rule (The "Life" Rule)
+
+- **Mandatory Self-Improvement**: Every Product (Skill Pack) produced by this factory **MUST** include a "Kaizen Skill" (Self-Improvement).
+  - A product must be able to analyze its user's pain points and suggest improvements to itself.
+  - Example: `99_activity_kaizen`, `99_project_retrospective`.
