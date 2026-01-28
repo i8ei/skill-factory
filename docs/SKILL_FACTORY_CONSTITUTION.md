@@ -30,3 +30,10 @@ Every skill must reside in `skills/<skill_id>/` and contain at least:
   1.  Found similar? -> Import -> Quarantine (Lint/Test) -> Patch.
   2.  No match? -> Create Fresh.
 - **Friction Rule**: Friction 2-3 times -> New Skill.
+
+## 5. Product Separation Rule (Infrastructure vs. Product)
+
+- **Factory Infrastructure**: Skills in `skill factory/skills/` must be restricted to "Meta-Skills" that operate the factory itself (Core, QA, Procurement, Distribution).
+- **Product Skills**: Any domain-specific skill pack (e.g., "Assembly Member Pack", "Coding Pack") **MUST** be exported to its own independent repository.
+  - Do not mix product inventory with factory machinery.
+  - Use `job_pack_composer` to perform the separation.
