@@ -21,3 +21,17 @@ Run these to verify the Factory is operational.
 - **Action**: Mark 'temp_skill' as deprecated in its SKILL.md.
 - **Action**: Ask Curator.
 - **Expectation**: Curator flags it as [DEPRECATED].
+
+## Test Suite 4: Trigger Governance
+
+### Test A: Reliable Invocation
+- **Prompt**: 「GitHubで見つけたスキルを取り込みたい。検疫して」
+- **Expected**: `skill_import_intake` acts as the primary agent. (Reason: Trigger matches "取り込み", "検疫").
+
+### Test B: Avoid False Positive
+- **Prompt**: 「配布用にREADME整えて」
+- **Expected**: `packager_readme_writer` acts as primary. `skill_import_intake` does **not** interfere. (Reason: Matches "README整備" Negative Trigger).
+
+### Test C: Conflict Resolution
+- **Prompt**: 「importって何？」
+- **Expected**: The system explains the term or asks for clarification, potentially referencing `skill_import_intake` but NOT starting the intake process automatically. (Reason: Ambiguous trigger).

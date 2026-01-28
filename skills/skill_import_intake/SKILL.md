@@ -158,10 +158,32 @@ description: 外部から見つけたスキルを工場規格（憲法）に適�
 
 ---
 
-## 9) トリガーワード
+## 9) Trigger Governance
 
-- 輸入 / import / 取り込み / 受付 / 検疫 / 他人スキル / 外部スキル
-- ライセンス確認 / provenance / imported
+### Primary (Strong Match)
+
+- 輸入
+- 取り込み
+- 検疫
+- import
+- intake
+- 外部スキル取り込み
+- 他人スキル取り込み
+
+### Secondary (Auxiliary)
+
+- 出自
+- provenance
+- ライセンス確認
+- imported
+- 受付票
+- ソース参照
+
+### Negative (Avoid)
+
+- 調査して (Calls `skill_scout_web`)
+- README整備 (Calls `packager_readme_writer`)
+- 配布準備 (Calls `job_pack_composer`)
 
 ---
 
