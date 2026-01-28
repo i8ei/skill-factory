@@ -15,6 +15,7 @@ When checking a skill (run on `skills/<id>`):
 2.  **Frontmatter**: Is there valid YAML with `name` and `description`?
 3.  **Readability**: Are instructions clear?
 4.  **Constitution Compliance**: Does it violate any friction or friction rules?
+5.  **Trigger Governance**: Does it define "Trigger Words" (Primary/Secondary)?
 
 ## Output
 
