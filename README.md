@@ -28,12 +28,11 @@ This repository acts as the source of truth for the "Skill Factory" methodology.
 | `skill_chain_simulator`       | Tests if skills connect correctly. |
 | `skill_dependency_visualizer` | Draws the map of the factory.      |
 | **Distribution**              |                                    |
-
-| `packager_readme_writer` | Writes public docs. |
-| `job_pack_composer` | Bundles for export. |
-| **Procurement** | |
-| `skill_scout_web` | Finds existing skills. |
-| `skill_import_intake` | Ingests external skills. |
+| `packager_readme_writer`      | Writes public docs.                |
+| `job_pack_composer`           | Bundles for export.                |
+| **Procurement**               |                                    |
+| `skill_scout_web`             | Finds existing skills.             |
+| `skill_import_intake`         | Ingests external skills.           |
 
 ## Quickstart
 
@@ -63,4 +62,6 @@ graph LR
 See `docs/SKILL_FACTORY_CONSTITUTION.md`.
 Flow: Scout -> Create -> Test -> PR.
 
-## LicenseMIT
+## License
+
+MIT
