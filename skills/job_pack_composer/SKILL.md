@@ -22,14 +22,12 @@ Create a distribution package for a skill or a set of skills (Skill Pack).
 
 - **Use case**: Launching a new domain-specific Skill Pack (e.g., Giin Skill Pack).
 - **Process**:
-  1.  **Create Root**: Create a new directory `<product_name>` outside of the factory (e.g., on Desktop).
-  2.  **Migrate Content**:
-      - Move `skills/<product_scope>/` to `<new_repo>/skills/<product_scope>/`.
-      - Move related `templates/` and `examples/`.
-  3.  **Clean Factory**: Remove the product files from the `skill factory` to keep infrastructure clean.
-  4.  **Initialize**:
+  1.  **Source**: Identify the folder in `workbench/` (e.g., `workbench/new_pack`).
+  2.  **Export**: Move the folder content to a new root directory outside the factory.
+  3.  **Initialize**:
       - Create a specific `README.md` for the product.
       - Run `git init`.
+  4.  **Cleanup**: Ensure `workbench/` is clean (or keep as archive if needed, but prefer clean).
   5.  **Handover**: Notify the user of the new repository location.
 
 ## Dependency Check
