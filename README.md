@@ -23,6 +23,8 @@ This repository acts as the source of truth for the "Skill Factory" methodology.
 | `skill_test_generator`       | Creates tests.                    |
 | `evolution_log_capturer`     | Records why a skill failed.       |
 | `skill_patch_proposer`       | Fixes skills based on logs.       |
+| **Self-Improvement**         |                                   |
+| `factory_kaizen_architect`   | Proposes new skills for Factory.  |
 | **Distribution**             |                                   |
 | `packager_readme_writer`     | Writes public docs.               |
 | `job_pack_composer`          | Bundles for export.               |

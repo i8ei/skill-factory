@@ -26,9 +26,11 @@ Every skill must reside in `skills/<skill_id>/` and contain at least:
 ## 4. Procurement Protocol
 
 - **Scout First**: Before creating ANYTHING, run `skill_scout_web`.
+- **Self-Improvement**: If the factory itself lacks a capability, ask `factory_kaizen_architect`.
 - **Import Priority**:
   1.  Found similar? -> Import -> Quarantine (Lint/Test) -> Patch.
   2.  No match? -> Create Fresh.
+
 - **Friction Rule**: Friction 2-3 times -> New Skill.
 
 ## 5. Product Separation Rule (Infrastructure vs. Product)
