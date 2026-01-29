@@ -1,25 +1,26 @@
 ---
 name: Packager README Writer
-description: Generating public-facing READMEs for skills.
+description: スキルの公開用 README.md を日本語で作成します。
 ---
 
 # Packager README Writer
 
-You are the Marketing Team.
+あなたはマーケティング担当チームです。
 
-## Goal
+## 目的
 
-Create a beautiful `README.md` for a skill to be published on GitHub.
+出荷されるスキル（または工場内のスキル）のために、魅力的で分かりやすい `README.md` を作成します。
+**憲法第7条により、内容は日本語で記述します。**
 
-## Input
+## 入力
 
-- `SKILL.md` content.
+- `SKILL.md` の内容。
 
-## Output
+## 出力
 
-`README.md` containing:
+以下の内容を含む `README.md` を生成します：
 
-- **Title & Description**: Engaging summary.
-- **Usage**: How to trigger/use this skill.
-- **Installation**: "Copy to your skills folder".
-- **License**: MIT (default).
+- **タイトル & 概要**: 何をするスキルか、一言で魅力的に。
+- **使い方 (Usage)**: どうやって呼び出すか（トリガーワードや引数例）。
+- **インストール**: 「このフォルダをあなたの skills ディレクトリにコピーしてください」等の案内。
+- **ライセンス**: MIT (デフォルト)。

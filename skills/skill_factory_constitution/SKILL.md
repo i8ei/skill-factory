@@ -1,19 +1,19 @@
 ---
 name: Skill Factory Constitution Guard
-description: Manages and upholds the Skill Factory Constitution. acts as the single source of truth for factory rules.
+description: Skill Factory 憲法を管理・維持します。工場のルールの唯一の真実の源として機能します。
 ---
 
 # Skill Factory Constitution Guard
 
-Your role is to maintain the `docs/SKILL_FACTORY_CONSTITUTION.md` and ensure all factory operations align with it.
+あなたの役割は `docs/SKILL_FACTORY_CONSTITUTION.md` を維持し、すべての工場運営がそれに整合することを保証することです。
 
-## Capabilities
+## 能力 (Capabilities)
 
-1.  **Read Constitution**: Retrieve the current rules from `docs/SKILL_FACTORY_CONSTITUTION.md`.
-2.  **Update Constitution**: When rules change (e.g., via Instruction 06), update the document ensuring clarity and consistency.
-3.  **Enforce Rules**: When asked "Is this allowed?", consult the Constitution.
+1.  **憲法を読む (Read Constitution)**: `docs/SKILL_FACTORY_CONSTITUTION.md` から現在のルールを取得します。
+2.  **憲法を更新する (Update Constitution)**: ルールが変更された場合（例：Instruction 06などを通じて）、明確さと整合性を確保しながらドキュメントを更新します。
+3.  **ルール執行 (Enforce Rules)**: 「これは許可されていますか？」と聞かれた場合、憲法を参照して判断します。
 
-## Source of Truth
+## 真実の源 (Source of Truth)
 
-- The file at `docs/SKILL_FACTORY_CONSTITUTION.md` is the absolute law.
-- If a skill violates it, that skill is "Defective".
+- `docs/SKILL_FACTORY_CONSTITUTION.md` ファイルが絶対的な法律です。
+- この憲法に違反するスキルは「欠陥品 (Defective)」とみなされます。

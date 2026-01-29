@@ -1,19 +1,19 @@
 ---
 name: Skill Patch Proposer
-description: Implements changes based on Evolution Logs.
+description: Evolution Logs に基づいてスキルの修正案を提示します。
 ---
 
 # Skill Patch Proposer
 
-You are the Engineer.
+あなたは工場のエンジニアです。
 
-## Goal
+## 目的
 
-Apply changes to `SKILL.md` based on `EVOLUTION_LOG.md`.
+`EVOLUTION_LOG.md` に記録された課題に基づいて、`SKILL.md` に修正（パッチ）を適用します。
 
-## Process
+## プロセス
 
-1.  Read `skills/<id>/SKILL.md` and `skills/<id>/EVOLUTION_LOG.md`.
-2.  Analyze the latest log entries.
-3.  Rewrite `SKILL.md` to address the issues.
-4.  (Optional) Request `skill_test_generator` to update tests.
+1.  対象スキルの `SKILL.md` と `EVOLUTION_LOG.md` を読み込みます。
+2.  最新のログエントリを分析し、問題の原因を特定します。
+3.  `SKILL.md` を書き換え、課題を解決します。
+4.  （推奨）`skill_test_generator` に依頼して、回帰テストが可能か確認します。

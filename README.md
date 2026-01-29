@@ -1,53 +1,59 @@
 # Skill Factory
 
-A standardized factory for manufacturing, maintaining, and distributing AI Agent Skills.
-This repository acts as the source of truth for the "Skill Factory" methodology.
+AIエージェントの「スキル」を製造、維持、配布するための標準化された工場です。
+このリポジトリは「Skill Factory」手法の正本（Source of Truth）として機能します。
 
-**OPERATIONAL RULES (STRICT):**
+**運用ルール (厳守):**
 
-- **Friction Rule**: Do not create skills for one-off tasks. **Friction 2-3 times -> New Skill.** (Prefer patching existing).
-- **Procurement First**: **Always run Scout (`skill_scout_web`) before creating.**
-- **Quality Assurance**: A skill is "Unfinished" without **3 Acceptance Tests**.
-- **Lifecycle**: Follow `deprecated` -> `removed` stages.
+- **摩擦ルール (Friction Rule)**: 一回限りのタスクのためにスキルを作らないでください。「2〜3回繰り返して摩擦を感じたら」スキル化します。（既存スキルのパッチを推奨）
+- **まず調達 (Procurement First)**: **作る前に必ずスカウト (`skill_scout_web`) を走らせてください。**
+- **品質保証 (Quality Assurance)**: **3つの受け入れテスト**がないスキルは「未完成」です。
+- **ライフサイクル**: `deprecated` -> `removed` のステージに従ってください。
+- **言語標準**: すべての対話と成果物は **日本語** で行ってください（憲法第7条）。
 
-## Capabilities
+## 機能 (Capabilities)
 
-| Skill                         | Description                        |
-| :---------------------------- | :--------------------------------- |
-| **Core**                      |                                    |
-| `skill_factory_constitution`  | The Guardian of the Rules.         |
-| `universal_skill_factory`     | The Creator. Makes new skills.     |
-| `skill_linter_auditor`        | The Inspector. Checks compliance.  |
-| `skill_catalog_curator`       | The Librarian. Finds skills.       |
-| **QA Loop**                   |                                    |
-| `skill_test_generator`        | Creates tests.                     |
-| `evolution_log_capturer`      | Records why a skill failed.        |
-| `skill_patch_proposer`        | Fixes skills based on logs.        |
-| **Self-Improvement**          |                                    |
-| `factory_kaizen_architect`    | Proposes new skills for Factory.   |
-| `skill_chain_simulator`       | Tests if skills connect correctly. |
-| `skill_dependency_visualizer` | Draws the map of the factory.      |
-| **Distribution**              |                                    |
-| `packager_readme_writer`      | Writes public docs.                |
-| `job_pack_composer`           | Bundles for export.                |
-| **Procurement**               |                                    |
-| `skill_scout_web`             | Finds existing skills.             |
-| `skill_import_intake`         | Ingests external skills.           |
+| Skill                          | Description                          |
+| :----------------------------- | :----------------------------------- |
+| **Foundation (Requirements)**  |                                      |
+| `skill_specificator_architect` | 設計士。曖昧な要望を仕様書にします。 |
+| **Core**                       |                                      |
+| `skill_factory_constitution`   | 憲法の番人。ルールを守らせます。     |
+| `universal_skill_factory`      | 製造機。新しいスキルを作ります。     |
+| `skill_linter_auditor`         | 検品係。コンプライアンスをチェック。 |
+| `skill_catalog_curator`        | 司書。スキルを管理・検索します。     |
+| **QA Loop**                    |                                      |
+| `skill_test_generator`         | テスト作成係。受入テストを作ります。 |
+| `evolution_log_capturer`       | 記録係。失敗ログを記録します。       |
+| `skill_patch_proposer`         | 修理係。ログを元にパッチを当てます。 |
+| **Self-Improvement**           |                                      |
+| `factory_kaizen_architect`     | 工場自体の改善を提案します。         |
+| `skill_chain_simulator`        | スキルの連携テストを行います。       |
+| `skill_dependency_visualizer`  | 工場の全体図を描画します。           |
+| **Distribution**               |                                      |
+| `packager_readme_writer`       | 取説係。READMEを書きます。           |
+| `job_pack_composer`            | 出荷係。パックをエクスポートします。 |
+| **Procurement**                |                                      |
+| `skill_scout_web`              | スカウト。既存スキルを探します。     |
+| `skill_import_intake`          | 税関。外部スキルを取り込みます。     |
 
-## Quickstart
+## クイックスタート (Quickstart)
 
-1.  **Scout**: `skill_scout_web "I need a graph plotter"`
-2.  **Create**: `universal_skill_factory "Create a graph plotter skill"`
-3.  **Lint/Test**: `skill_linter_auditor` -> `skill_test_generator`
+1.  **設計 (Spec)**: `skill_specificator_architect "グラフ描画スキルが欲しい"`
+2.  **探索 (Scout)**: `skill_scout_web "グラフ描画ライブラリ"`
+3.  **製造 (Create)**: `universal_skill_factory "仕様書に基づき製造せよ"`
+4.  **検査 (Inspect)**: 自動的に `skill_linter_auditor` と `skill_test_generator` が走ります。
 
-## Factory Line
+## 製造ライン (Factory Line)
 
 ```mermaid
 graph LR
-    User --> |Req| Scout
-    Scout --> |None| Factory
+    User --> |Req| Architect
+    Architect --> |Spec| Scout
+    Scout --> |None| Approval
     Scout --> |Found| Import
-    Factory --> Lint
+    Approval --> |LGTM| Factory
+    Factory --> |Auto| Lint
     Import --> Lint
     Lint --> Test
     Test --> Catalog
@@ -57,10 +63,10 @@ graph LR
     Patch --> Lint
 ```
 
-## Contributing
+## 貢献 (Contributing)
 
-See `docs/SKILL_FACTORY_CONSTITUTION.md`.
-Flow: Scout -> Create -> Test -> PR.
+`docs/SKILL_FACTORY_CONSTITUTION.md` を参照してください。
+フロー: 設計 -> 承認 -> 製造 -> 検査 -> PR。
 
 ## License
 

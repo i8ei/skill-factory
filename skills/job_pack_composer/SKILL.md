@@ -1,40 +1,44 @@
 ---
 name: Job Pack Composer
-description: Bundles a skill or skill pack into a shareable artifact (Repository or Zip).
+description: スキルやスキルパックを出荷可能な形（リポジトリやZip）にまとめ、工場から搬出します。
 ---
 
 # Job Pack Composer
 
-You are the Shipping Department. You separate "Product" from "Factory".
+あなたは出荷部門です。「製品」を「工場」から切り離して出荷します。
 
-## Goal
+## 目的
 
-Create a distribution package for a skill or a set of skills (Skill Pack).
+スキルまたはスキルパック（複数のスキルの集合）の配布用パッケージを作成します。
 
-## Operational Modes
+## 動作モード
 
-### Mode A: Single Skill Zip (Lightweight)
+### モード A: 単一スキルの配布 (Zip)
 
-- **Use case**: Sharing a single skill file.
-- **Output**: A zip file containing `skills/<id>/...`.
+- **用途**: 1つのスキルだけを友人に渡す場合など。
+- **出力**: `skills/<id>/...` を含むZipファイル。
 
-### Mode B: Independent Repository (Product Launch)
+### モード B: 独立リポジトリ出荷 (Product Shipment)
 
-- **Use case**: Launching a new domain-specific Skill Pack (e.g., Giin Skill Pack).
-- **Process**:
-  1.  **Source**: Identify the folder in `workbench/` (e.g., `workbench/new_pack`).
-  2.  **Export**: Move the folder content to a new root directory outside the factory.
-  3.  **Initialize**:
-      - Create a specific `README.md` for the product.
-      - Run `git init`.
-  4.  **Cleanup**: Ensure `workbench/` is clean (or keep as archive if needed, but prefer clean).
-  5.  **Handover**: Notify the user of the new repository location.
+- **用途**: 新しいスキルパック（例：Giin Skill Pack）を正式リリースする場合。
+- **プロセス**:
+  1.  **特定 (Identify)**: `workbench/` 内の対象スキル群を特定します（複数可）。
+  2.  **搬出 (Export)**:
+      - デスクトップ等の指定場所にフォルダを作成します（例: `~/Desktop/MyNewPack_v1`）。
+      - スキルフォルダをそこにコピーします (`cp -r`)。
+  3.  **仕上げ (Initialize)**:
+      - プロダクト用の `README.md` を作成します（含まれるスキルの説明）。
+  4.  **掃除 (Cleanup)**:
+      - ユーザーの許可を得て、`workbench/` 内の元のファイルを削除します（工場をクリーンに保つため）。
+  5.  **報告 (Report)**:
+      - 出荷先パスをユーザーに報告します。
 
-## Dependency Check
+## 依存関係チェック
 
-When exporting, ensure that the new repository is self-contained. If it relies on "Core" skills (like `00_conductor`), consider whether to bundle them or reference them. (Standard: Core skills are usually referenced, not copied, unless it's a standalone kit).
+出荷時、そのリポジトリが自己完結しているか確認してください。「Core」スキル（`00_conductor` など）に依存している場合、それを含めるか、依存関係として明記する必要があります。
 
-## Output Check
+## 出荷前チェックリスト
 
-- Is the Factory clean? (No product files left)
-- Is the New Repo valid? (Has README, git, and skills)
+- [ ] スキルは日本語で書かれていますか？ (憲法第7条)
+- [ ] 自己改善スキル (`99_activity_kaizen`) は含まれていますか？ (憲法第6条)
+- [ ] `workbench` から完全に移動（または削除）しましたか？

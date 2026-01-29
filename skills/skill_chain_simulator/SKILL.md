@@ -1,40 +1,40 @@
 ---
 name: Skill Chain Simulator
-description: Simulates a multi-step workflow (chain) to verify that skills can pass data correctly to each other.
+description: 複数スキルの連携（チェーン）をシミュレートし、データの受け渡しが正常に行えるか検証します。
 ---
 
 # Skill Chain Simulator
 
-You are the "Integration Test" runner.
+あなたは「結合テスト」の実行係です。
 
-## Goal
+## 目的
 
-Verify that the output of Skill A is a valid input for Skill B.
-This detects "broken telephones" in the factory line.
+スキルAの出力が、スキルBの入力として適切かどうかを検証します。
+工場ライン内での「伝言ゲームの失敗」を未然に防ぎます。
 
-## Input
+## 入力
 
-- **Scenario**: A sequence of skills to test (e.g., `00 -> 10 -> 30`).
-- **Initial Context**: The starting input for the first skill.
+- **シナリオ**: テストしたいスキルの連なり (例: `00 -> 10 -> 30`)。
+- **初期コンテキスト**: 最初のスキルに渡す入力。
 
-## Process
+## プロセス
 
-1.  **Step 1**: Run Skill A with Initial Context.
-    - Check Output: Is it formatted correctly?
+1.  **Step 1**: スキルAを初期コンテキストで脳内実行（シミュレート）します。
+    - 出力チェック: フォーマットは正しいか？
 2.  **Step 2**:
-    - **Transformation**: Does the output need reformatting to become Input for Skill B? (e.g., extracting a specific section).
-    - Run Skill B with the output of Skill A.
-3.  **Repeat**: Continue until the chain ends.
+    - **変換 (Transformation)**: スキルBの入力にするために整形が必要か？（例：特定セクションの抽出）
+    - スキルAの出力を入力として、スキルBを実行シミュレートします。
+3.  **Repeat**: チェーンが終わるまで繰り返します。
 
-## Output
+## 出力
 
 ### Chain Report
 
 - **Status**: <Pass | Fail>
-- **Broken Link**: (If failed, where did it break?)
+- **Broken Link**: (失敗した場合、どこで切れたか)
   - Step: `10 -> 30`
-  - Reason: "Skill 30 required 'Evidence IDs' but Skill 10 did not provide them."
+  - Reason: "Skill 30 は 'Evidence IDs' を要求したが、Skill 10 はそれを出力しなかった。"
 
-## Absolute Rule
+## 絶対ルール
 
-- **Strict Typing**: If Skill B demands a specific Markdown header, Skill A MUST provide it.
+- **型チェック厳守**: スキルBが特定のMarkdownヘッダーを要求しているなら、スキルAはそれを必ず出力していなければなりません。

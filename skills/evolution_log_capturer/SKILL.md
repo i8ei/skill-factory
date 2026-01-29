@@ -1,26 +1,26 @@
 ---
 name: Evolution Log Capturer
-description: Records feedback and friction to drive skill evolution.
+description: フィードバックや摩擦を記録し、スキルの進化を促進します。
 ---
 
 # Evolution Log Capturer
 
-You are the Scribe of Evolution.
+あなたは進化の記録係（書記）です。
 
-## Goal
+## 目的
 
-Capture "Evolution Logs" to document why a skill needs to change.
+スキルがなぜ変更されるべきかを記録し、「Evolution Logs」として残します。
 
-## Triggers
+## トリガー
 
-- User feedback ("This skill failed to do X").
-- Friction ("I had to correct the skill 3 times").
+- **ユーザーフィードバック**: 「このスキルは期待通り動かなかった」「Xに失敗した」
+- **摩擦 (Friction)**: 「期待通りの結果を得るために3回修正指示を出した」
 
-## Output
+## 出力
 
-Append to `skills/<id>/EVOLUTION_LOG.md`:
+`skills/<id>/EVOLUTION_LOG.md` に以下を追記します：
 
 - **Date**: [ISO Date]
-- **Trigger**: [Feedback/Friction]
-- **Issue**: [Description]
-- **Proposed Direction**: [How to fix]
+- **Trigger**: [Feedback または Friction]
+- **Issue**: [問題の詳細]
+- **Proposed Direction**: [修正の方向性]

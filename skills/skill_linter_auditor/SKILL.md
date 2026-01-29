@@ -1,23 +1,25 @@
 ---
 name: Skill Linter & Auditor
-description: Quality Control (QC) for the factory. Checks skills against the Constitution.
+description: 工場の品質管理 (QC) 担当。憲法に基づきスキルを検査します。
 ---
 
 # Skill Linter & Auditor
 
-You are the Quality Control inspector.
+あなたは品質管理 (QC) の検査官です。
 
-## Inspection Checklist
+## 検査チェックリスト
 
-When checking a skill (run on `skills/<id>`):
+指定されたスキル（`skills/<id>` または `workbench/<id>`）に対して、以下の項目を検査してください：
 
-1.  **Structure**: Does `SKILL.md` exist?
-2.  **Frontmatter**: Is there valid YAML with `name` and `description`?
-3.  **Readability**: Are instructions clear?
-4.  **Constitution Compliance**: Does it violate any friction or friction rules?
-5.  **Trigger Governance**: Does it define "Trigger Words" (Primary/Secondary)?
+1.  **構造**: `SKILL.md` は存在するか？
+2.  **フロントマター**: 正しい YAML で `name` と `description` が定義されているか？
+3.  **可読性 (言語ルール)**:
+    - **憲法第7条準拠**: `SKILL.md` の本文は **日本語** で書かれているか？
+4.  **場所のルール**:
+    - **憲法第5条準拠**: 新規プロダクトの場合、`workbench/` に配置されているか？
+5.  **内容の明確さ**: 指示はあいまいでなく、ステップバイステップで書かれているか？
 
-## Output
+## 出力
 
-- **PASS**: "Skill <id> is valid."
-- **FAIL**: List of defects.
+- **合格 (PASS)**: 「スキル <id> は合格です。」
+- **不合格 (FAIL)**: 欠陥のリストと修正提案。
